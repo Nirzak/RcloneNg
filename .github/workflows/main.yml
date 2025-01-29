@@ -40,7 +40,7 @@ jobs:
       - name: deploy github page
         if: github.event_name == 'push'
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.DEPLOY_TOKEN }}
         run: |
           npm run release -- -p dev && git reset HEAD~
-          npm run deploy --  --name="nirzak" --email="nirzashzakilim@gmail.com"
+          npm run deploy --  --name="Nirzak" --email="Nirzashzakilim@gmail.com"
